@@ -1,0 +1,60 @@
+<!-- Button trigger modal -->
+<button mat-raised-button color="primary" data-toggle="modal" data-target="#exampleModal3">
+    Edit
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form novalidate #productsForm="ngForm" (ngSubmit)="editProduct()">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="exampleInputIDEdit">ID</label>
+                            <input type="text" class="form-control" id="exampleInputIDEdit" placeholder="ID"
+                                [(ngModel)]="element.identification" name="identification" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputNameEdit">Name</label>
+                            <input type="text" class="form-control" id="exampleInputNameEdit" placeholder="name"
+                                [(ngModel)]="element.name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputCategoryEdit">Category</label>
+                            <select class="form-control" id="exampleInputCategoryEdit" [(ngModel)]="element.category"
+                                name="category" required>
+                                <option>Select Category</option>
+                                <option value="meat">Meat</option>
+                                <option value="dairy">Dairy</option>
+                                <option value="fruit">Fruit</option>
+                                <option value="vegetable">Vegetable</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPriceEdit">Price</label>
+                            <input type="text" class="form-control" id="exampleInputPriceEdit" placeholder="Price"
+                                [(ngModel)]="element.price" name="price" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputInventoryEdit">Inventory</label>
+                            <input type="text" class="form-control" id="exampleInputInventoryEdit"
+                                placeholder="Inventory" [(ngModel)]="element.inventory" name="inventory" required>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-success" [disabled]="!productsForm.valid">Confirm</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+<div id="login">
+    <div class="container">
+        <div id="login-row" class="row justify-content-center align-items-center">
+            <div id="login-column" class="col-md-6">
+                <div id="login-box" class="col-md-12 p-4">
+                    <form #profielForm="ngForm" (ngSubmit)="onUpdate()">
+                        <h3 class="text-center text-full-color">Profile</h3>
+
+                        <div class="form-group">
+                            <label for="name" class="text-full-color">Name:</label><br>
+                            <input type="text" [(ngModel)]="object.name" name="name" id="name" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="username" class="text-full-color">Username:</label><br>
+                            <input type="text" [(ngModel)]="object.username" name="username" id="username" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password" class="text-full-color">Password:</label><br>
+                            <input type="password" [(ngModel)]="object.password" name="password" id="password" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cpassword" class="text-full-color">Confirm Password:</label><br>
+                            <input type="password" [(ngModel)]="object.cpassword" name="cpassword" id="cpassword" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="submit" name="submit" class="btn background-full-color btn-md" value="Edit">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

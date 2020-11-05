@@ -1,0 +1,63 @@
+<div class="container-fluid row justify-content-end mt-5">
+    <ng-container>
+        <app-add-product></app-add-product>
+    </ng-container>
+</div>
+<mat-form-field class="text-light">
+    <mat-label class="text-light">Filter</mat-label>
+    <input matInput (keyup)="applyFilter($event)" class="text-light" placeholder="Ex. ium" #input>
+</mat-form-field>
+<div class="scrolltable">
+    <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+        <!-- Position Column -->
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef> ID </th>
+            <td mat-cell *matCellDef="let element"> {{element.identification}} </td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef> Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+
+        <!-- category Column -->
+        <ng-container matColumnDef="category">
+            <th mat-header-cell *matHeaderCellDef> Category </th>
+            <td mat-cell *matCellDef="let element"> {{element.category}} </td>
+        </ng-container>
+
+        <!-- price Column -->
+        <ng-container matColumnDef="price">
+            <th mat-header-cell *matHeaderCellDef> Price </th>
+            <td mat-cell *matCellDef="let element"> {{element.price}} </td>
+        </ng-container>
+
+        <!-- inventory Column -->
+        <ng-container matColumnDef="inventory">
+            <th mat-header-cell *matHeaderCellDef> Inventory </th>
+            <td mat-cell *matCellDef="let element"> {{element.inventory}} </td>
+        </ng-container>
+
+        <!-- Column edit -->
+        <ng-container matColumnDef="editar">
+            <th mat-header-cell *matHeaderCellDef>Edit</th>
+            <td mat-cell *matCellDef="let element">
+                <app-edit-product [element]="element"></app-edit-product>
+            </td>
+        </ng-container>
+
+        <!-- Column delete -->
+        <ng-container matColumnDef="eliminar">
+            <th mat-header-cell *matHeaderCellDef>Delete</th>
+            <td mat-cell *matCellDef="let element">
+                <app-delete-product [element]="element"></app-delete-product>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="['id', 'name', 'category', 'price',
+        'inventory', 'editar', 'eliminar']"></tr>
+        <tr mat-row *matRowDef="let fila; columns: ['id', 'name', 'category', 'price',
+        'inventory', 'editar', 'eliminar'];"></tr>
+    </table>
+</div>

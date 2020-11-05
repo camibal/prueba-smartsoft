@@ -1,0 +1,29 @@
+<div id="login">
+  <div class="container">
+    <div id="login-row" class="row justify-content-center align-items-center">
+      <div id="login-column" class="col-md-6">
+        <div id="login-box" class="col-md-12 p-4">
+          <form [formGroup]="LoginForm" (ngSubmit)="onLogin()">
+            <h3 class="text-center text-full-color">Sign In</h3>
+            <div class="form-group">
+              <label for="username" class="text-full-color">Username:</label><br>
+              <input type="text" formControlName="username" id="username" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="password" class="text-full-color">Password:</label><br>
+              <input type="password" formControlName="password" id="password" class="form-control">
+            </div>
+            <div class="form-group p-3">
+              <label for="remember-me" class="text-full-color"><span>Remember me</span> <span><input id="remember-me"
+                    name="remember-me" type="checkbox"></span></label><br>
+              <input type="submit" name="submit" class="btn background-full-color btn-md" value="Login">
+            </div>
+            <div id="register-link" class="text-right">
+              <a href="/auth/register" class="text-full-color">Sign Up</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

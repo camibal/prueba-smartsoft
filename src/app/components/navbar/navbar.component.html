@@ -1,0 +1,136 @@
+<!--Navbar -->
+<nav class="mb-1 navbar navbar-expand-md navbar-dark secondary-color lighten-1 w-100">
+  <a class="navbar-brand" [routerLink]="['/']">
+    <img src="https://skgtecnologia.com/wp-content/uploads/2020/06/smart-helios.png" alt="">
+  </a>
+  <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-555"
+    aria-controls="navbarSupportedContent-555" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
+    <ul class="navbar-nav w-100 d-none d-md-flex ul-navbar">
+      <li class="nav-item  ml-li-navbar-active">
+        <a class="nav-link" [routerLink]="['/']">
+          <i class="fa fa-volume-up text-light"></i>
+          <span class="ml-3 text-light">39</span>
+        </a>
+      </li>
+      <li class="nav-item ml-li-navbar">
+        <a class="nav-link" [routerLink]="['/']">
+          <i class="fa fa-envelope-o text-light"></i>
+          <span class="ml-3 text-light">57</span>
+        </a>
+      </li>
+      <li class="nav-item ml-li-navbar">
+        <a class="nav-link" [routerLink]="['/']">
+          <i class="fa fa-comments text-light"></i>
+          <span class="ml-3 text-light">68</span>
+        </a>
+      </li>
+      <li class="nav-item ml-li-navbar">
+        <a class="nav-link" [routerLink]="['/']">
+          <i class="fa fa-cloud text-light"></i>
+          <span class="ml-3 text-light">15</span>
+        </a>
+      </li>
+      <li class="nav-item ml-li-navbar">
+        <a class="nav-link" [routerLink]="['/']">
+          <i class="fa fa-phone text-light"></i>
+          <span class="ml-3 text-light">58</span>
+        </a>
+      </li>
+      <li class="nav-item ml-li-navbar">
+        <a class="nav-link" [routerLink]="['/']">
+          <i class="fa fa-volume-control-phone text-light"></i>
+          <span class="ml-3 text-light">15</span>
+        </a>
+      </li>
+      <li class="nav-item ml-li-navbar">
+        <a class="nav-link" [routerLink]="['/']">
+          <i class="fa fa-cog text-light"></i>
+        </a>
+      </li>
+      <li class="nav-item avatar dropdown d-none d-md-block  ml-li-navbar">
+        <a class="nav-link" id="navbarDropdownMenuLink-55" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
+          <i class="fa fa-user text-light"></i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg-right dropdown-secondary"
+          aria-labelledby="navbarDropdownMenuLink-55">
+          <a [routerLink]="['/profile']" class="dropdown-item">Profile</a>
+          <button class="dropdown-item" (click)="removeItem()">Log out</button>
+        </div>
+      </li>
+    </ul>
+    <!-- responsive -->
+    <ul class="navbar-nav nav-flex-icons p-3">
+      <div class="row d-md-none text-center">
+        <div class="col-2">
+          <a class="nav-link" [routerLink]="['/']">
+            <i class="fa fa-volume-up text-light"></i>
+            <span class="text-light">39</span>
+          </a>
+        </div>
+        <div class="col-2">
+          <a class="nav-link" [routerLink]="['/']">
+            <i class="fa fa-envelope-o text-light"></i>
+            <span class="text-light">57</span>
+          </a>
+        </div>
+        <div class="col-2">
+          <a class="nav-link" [routerLink]="['/']">
+            <i class="fa fa-comments text-light"></i>
+            <span class="text-light">68</span>
+          </a>
+        </div>
+        <div class="col-2">
+          <a class="nav-link" [routerLink]="['/']">
+            <i class="fa fa-cloud text-light"></i>
+            <span class="text-light">15</span>
+          </a>
+        </div>
+        <div class="col-2">
+          <a class="nav-link" [routerLink]="['/']">
+            <i class="fa fa-phone text-light"></i>
+            <span class="text-light">58</span>
+          </a>
+        </div>
+        <div class="col-2">
+          <a class="nav-link" [routerLink]="['/']">
+            <i class="fa fa-volume-control-phone text-light"></i>
+            <span class="text-light">15</span>
+          </a>
+        </div>
+      </div>
+      <li class="nav-item avatar dropdown d-block d-md-none mt-4">
+        <i class="fa fa-signal text-light"></i>
+        <a [routerLink]="['/cities']" class="text-light pt-2 ml-3">Dashboard</a>
+      </li>
+      <li class="nav-item avatar dropdown 
+      d-block d-md-none mt-3">
+      <i class="fa fa-list-alt text-light"></i>
+        <a [routerLink]="['/products']" class="text-light pt-2 ml-3">Products</a>
+      </li>
+      <li class="nav-item avatar dropdown d-block d-md-none mt-3">
+        <i class="fa fa-volume-up text-light"></i>
+        <a [routerLink]="['/']" class="text-light pt-3 ml-3">Campaign</a>
+      </li>
+      <li class="nav-item avatar dropdown d-block d-md-none mt-3">
+        <i class="fa fa-users text-light"></i>
+        <a [routerLink]="['/']" class="text-light pt-3 ml-3">Patiens</a>
+      </li>
+      <li class="nav-item avatar dropdown d-block d-md-none mt-3">
+        <i class="fa fa-phone-square text-light"></i>
+        <a [routerLink]="['/']" class="text-light pt-3 ml-3">Programs</a>
+      </li>
+      <li class="nav-item avatar dropdown d-block d-md-none mt-3">
+        <i class="fa fa-align-left text-light"></i>
+        <a [routerLink]="['/']" class="text-light pt-3 ml-3">Monitoring</a>
+      </li>
+      <li class="nav-item avatar dropdown d-block d-md-none mt-3">
+        <button class="dropdown-item text-light pl-0" (click)="removeItem()">Log out</button>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!--/.Navbar -->
