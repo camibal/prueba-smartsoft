@@ -1,4 +1,4 @@
-# prueba-front-smartsoft <br>
+# prueba-smartsoft <br>
 # back-end
 cd API <br>
 npm install <br>
